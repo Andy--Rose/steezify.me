@@ -4,7 +4,7 @@ var appModule = angular.module('steezify.me', [
 	'home', 
 	'feed', 
 	'music', 
-	'work'
+	'events'
 ]);
 
 // Routing for the different pages
@@ -22,8 +22,8 @@ appModule.config(['$routeProvider', '$locationProvider',
 			.when('/music', {
 				template: "<music></music>"
 			})
-			.when('/work', {
-				template: "<work></work>"
+			.when('/events', {
+				template: "<events></events>"
 			})
 			.otherwise('/');		// Routes other paths to home. TODO: Create error page
 		$locationProvider.html5Mode(true);
