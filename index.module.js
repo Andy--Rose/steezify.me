@@ -2,7 +2,7 @@ var appModule = angular.module('steezify.me', [
 	'ngRoute', 
 	'navigation', 
 	'home', 
-	'about', 
+	'feed', 
 	'info', 
 	'work'
 ]);
@@ -16,8 +16,8 @@ appModule.config(['$routeProvider', '$locationProvider',
 			.when('/', {
 				template: '<home></home>'
 			})
-			.when('/about', {
-				template: "<about></about>"
+			.when('/feed', {
+				template: "<feed></feed>"
 			})
 			.when('/info', {
 				template: "<info></info>"
