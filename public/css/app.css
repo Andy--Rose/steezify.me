@@ -32,6 +32,10 @@ button > a
 	color:white;
 }
 
+.fb-page {
+	margin: 10%;
+}
+
 .home-bg {
 	background:url("../img/backgrounds/Tables.jpg") no-repeat center fixed;
 	-webkit-background-size: cover;
