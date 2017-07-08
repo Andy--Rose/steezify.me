@@ -32,8 +32,11 @@ button > a
 	color:white;
 }
 
-.fb-page {
-	margin: 10%;
+.feed-container {
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 15px;
+	width: 100%;
 }
 
 .home-bg {
