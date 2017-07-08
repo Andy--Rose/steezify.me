@@ -1,0 +1,55 @@
+<html ng-app="steezify.me">
+<head>
+	<head>
+		<base href="/">
+		<title>
+			Steezify
+		</title>
+		
+		<meta type="description" content="Andy Rose Professional Webpage" />
+		<meta type="content-type" content="text/html" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./public/css/app.css">
+		<link rel="stylesheet" href="./public/css/carousel.css">
+		
+		<link rel="icon" type="image/icon" href="./public/img/default/icon.ico" />
+		<link rel="shortcut icon" type="image/icon" href="./public/img/default/icon.ico" />
+	</head>
+	<body ng-controller="IndexController">
+		<!-- Import frameworks -->
+		<script src="./bower_components/angular/angular.js"></script>
+		<script src="./bower_components/angular-route/angular-route.js"></script>
+		<script src="./node_modules/jquery/dist/jquery.js"></script>
+		<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+		<script src="./index.module.js"></script>
+
+		<!-- Import Custom Scripts -->
+		<script src="./public/js/navigation.js" ></script>
+		<script src="./public/js/expandingBlocks.js" ></script>
+		<script src="./public/js/carouselVideo.js" ></script>
+
+		<!-- Import Angular Components -->
+		<script src="./app/components/navigation/navigation.module.js"></script>
+		<script src="./app/components/navigation/navigation.component.js"></script> 
+ 		<script src="./app/components/home/home.module.js"></script>
+		<script src="./app/components/home/home.component.js"></script>
+		<script src="./app/components/about/about.module.js"></script>
+		<script src="./app/components/about/about.component.js"></script>
+		<script src="./app/components/info/info.module.js"></script>
+		<script src="./app/components/info/info.component.js"></script>
+		<script src="./app/components/work/work.module.js"></script>
+		<script src="./app/components/work/work.component.js"></script>
+
+		<!-- Navigation Object -->
+		<navigation></navigation>
+		
+		<!-- Page holder used for components -->
+		<!-- Every page loads from index and uses a different component based on the URL args -->
+		<div ng-view class="page-view"></div>
+	</body>
+</head>

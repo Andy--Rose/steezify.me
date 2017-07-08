@@ -2,6 +2,10 @@
 Thumbs.db
 ehthumbs.db
 
+# Angular Stuff
+node_modules/
+bower_components/
+
 # Folder config file
 Desktop.ini
 
