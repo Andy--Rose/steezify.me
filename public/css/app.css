@@ -9,6 +9,11 @@ button > a
 	margin-right:15px;
 }
 
+.container-fluid
+{
+	overflow-y: scroll;
+}
+
 .container-main 
 {
 	margin-top:50px;
@@ -30,6 +35,27 @@ button > a
 {
 	margin:0;
 	color:white;
+}
+
+.profile-link-container
+{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+.profile-link
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.profile-link img
+{
+	width: 75px;
+	height: 75px;
 }
 
 .feed-container {
@@ -72,8 +98,8 @@ button > a
 #img_profile
 {
 	display: inline-flex;
-	height: 50%;
-	width: 50%;
+	height: 150px;
+	width: 150px;
 	max-height: 250px;
 	max-width: 250px;
 }
@@ -82,6 +108,12 @@ button > a
 {
 	display: inline-flex;
 	max-height: 50px;
+}
+
+#img_title
+{
+	height: 100px;
+	display: initial;
 }
 
 .navbar-brand
