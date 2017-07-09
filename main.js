@@ -1,5 +1,5 @@
 var Express = require('express');
-var Instafeed = require('instafeed')
+var Instafeed = require('instafeed.js')
 
 // configure the server
 const Server = Express();
