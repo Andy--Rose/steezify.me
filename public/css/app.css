@@ -167,6 +167,7 @@ button > a
 .info-inner
 {
 	display:none;
+	margin-top: 15px;
 	padding-left:15px;
 	padding-right:15px;
 	font-size:1.2em;
