@@ -11,6 +11,5 @@ angular.module('feed', [])
 				accessToken: '1962233567.9dcc458.7d0078788974466dbfb4399c7315e86a'
 			});
 			$scope.feed.run();
-			//instafeed("9dcc4584defe415a9fcabe2087a57648", "1962233567")
 		}
 	]);
