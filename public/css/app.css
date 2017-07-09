@@ -191,30 +191,30 @@ button > a
 	z-index:50;
 }
 
-#info_profile
+#info_soundcloud
 {
 	background-color:#FF9900;
 }
 
-#info_snowboard
+#info_mixcloud
 {
 	background-color:#A14472;
 }
 
 
-#info_music
+#info_bootleg1
 {
 	background-color:#008AE6;
 }
 
 
-#info_sports
+#info_bootleg2
 {
 	background-color:#4AB86E;
 }
 
 
-#info_gaming
+#info_release
 {
 	background-color:#FFCC00;
 }
