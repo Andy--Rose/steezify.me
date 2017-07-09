@@ -1,14 +1,20 @@
 <div class="container-fluid container-main" ng-controller="FeedController">
+	<div class="alert alert-warning" role="alert">
+	  Refresh if Facebook posts are not displayed.
+	</div>
+	
 	<div class="feed-container">
+		<!-- Facebook SDK -->
+		<div id="fb-root"></div>
 		<div class="fb-page" 
 			data-href="https://www.facebook.com/Steezify/" 
 			data-tabs="timeline" 
-			data-small-header="true" 
+			data-small-header="false" 
 			data-adapt-container-width="false" 
 			data-hide-cover="false" 
 			data-show-facepile="true">
 			<blockquote cite="https://www.facebook.com/Steezify/" class="fb-xfbml-parse-ignore">
-				<a href="https://www.facebook.com/Steezify/">Steezify</a>
+				<a href="https://www.facebook.com/Steezify/">Steezify on Facebook</a>
 			</blockquote>
 		</div>
 	</div>

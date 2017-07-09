@@ -1,8 +1,37 @@
 angular.module('feed', [])
-	.controller('FeedController', ['$scope', '$routeParams',
-		function FeedController($scope, $routeParams) {
+	.controller('FeedController', ['$scope', '$window', '$routeParams',
+		function FeedController($scope, $window, $routeParams) {
 			this.name = 'FeedController';
 			this.params = $routeParams;
+
+			// Initialize Facebook plugin
+			// (function(d, s, id) {
+			// var js, fjs = d.getElementsByTagName(s)[0];
+			// 	if (d.getElementById(id)) return;
+			// 	js = d.createElement(s); js.id = id;
+			// 	js.src = "//connect.facebook.net/en_US/sdk.js";
+			// 	fjs.parentNode.insertBefore(js, fjs);
+			// }(document, 'script', 'facebook-jssdk'));
+
+			// Load the SDK Asynchronously
+	        (function(d){
+	          var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+	          js = d.createElement('script'); js.id = id; js.async = true;
+	          js.src = "//connect.facebook.net/en_US/all.js";
+	          d.getElementsByTagName('head')[0].appendChild(js);
+	        }(document));
+
+			$window.fbAsyncInit = function() {
+			    FB.init({ 
+			      appId: '{your-app-id}',
+			      status: true, 
+			      cookie: true, 
+			      xfbml: true,
+			      version: 'v2.4'
+			    });
+			};
+
+			//$window.fbAsyncInit();
 
 			$scope.feed = new Instafeed({
 				get: 'user',
