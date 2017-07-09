@@ -140,7 +140,6 @@ button > a
 	float:left;
 	text-align:center;
 	margin:15px;
-	padding-top:30px;
 	overflow:hidden;
 	cursor:pointer;
 }
@@ -150,6 +149,13 @@ button > a
 	width:80%;
 	height:80%;
 	overflow:auto;
+}
+
+.info-icon
+{
+	margin-top: 5px;
+	width: 140px;
+	height: 140px;
 }
 
 .info-header
