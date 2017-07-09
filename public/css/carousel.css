@@ -39,6 +39,7 @@
 {
 	height:30px;
 	width:30px;
+	text-align: center;
 	z-index:15;
 }
 
@@ -50,11 +51,16 @@
 
 .carousel-indicators > li > img
 {
-	position:relative;
-	left:0px;
-	text-indent:0px;
-	width:25px;
-	height:25px;
+	display: block;
+	margin-left: 1px;
+	width:26px;
+	height:26px;
+}
+
+.carousel-indicators > li > img:hover
+{
+	height:30px;
+	width:30px;
 }
 
 .carousel-indicators > .active

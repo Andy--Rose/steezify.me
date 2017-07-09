@@ -1,164 +1,30 @@
 <div class="container-fluid container-main" ng-controller="EventsController">
-	<div id="work_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+	<div id="events_carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 		<ol class="carousel-indicators">
-			<li id="btn_medallia" data-target="#work_carousel" data-slide-to="0" class="active"></li>
-			<li id="btn_infospace" data-target="#work_carousel" data-slide-to="1"></li>
-			<li id="btn_uw" data-target="#work_carousel" data-slide-to="2"></li>
-			<li id="btn_otherJobs" data-target="#work_carousel" data-slide-to="3"></li>
+			<li id="btn_comingsoon" data-target="#events_carousel" data-slide-to="0" class="active">
+				<img src="public/img/logos/comingsoon.png">
+			</li>
 		</ol>
 	
 		<!-- Wrapper for slides -->
-		<div id="work_carousel_inner" class="carousel-inner" role="listbox">
-			<div id="medallia" class="item active">
+		<div id="events_carousel_inner" class="carousel-inner" role="listbox">
+			<div id="comingsoon" class="item active">
 				<div class="panel-group">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h3>Medallia</h3></div>
+						<div class="panel-heading"><h3>Coming Soon</h3></div>
 						<div class="panel-body">
-							<b>Title:</b> Cloud Engineer<br />
-							<b>Period:</b> June 16, 2015 - Current<br />
-							<b>Supervisor:</b> Johnny Truong
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">Responsibilities</div>
-						<div class="panel-body">Own, support and manage environments on AWS Cloud infrastructure</div>
-						<div class="panel-body">Automate and manage infrastructure using Docker, Mesos, and Aurora</div>
-						<div class="panel-body">Configure/own migration to new monitoring tool for all environments</div>
-						<div class="panel-body">Develop automation for processes using scripting/programming languages</div>
-						<div class="panel-body">Documentation of existing and new systems</div>
-						<div class="panel-body">Daily operational support; L2 support rotations (cloud and on-prem)</div>
-						<div class="panel-body">Manage off-shore team of contracted engineers</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">Skills Developed</div>
-						<div class="panel-body">
-							<span class="skillsDeveloped badge">Contractor Management</span>
-							<span class="skillsDeveloped badge">Linux Administration</span>
-							<span class="skillsDeveloped badge">Infrastructure Frameworks</span>
-							<span class="skillsDeveloped badge">AWS</span>
-							<span class="skillsDeveloped badge">Java</span>
-							<span class="skillsDeveloped badge">GO</span>
-							<span class="skillsDeveloped badge">Python</span>
-							<span class="skillsDeveloped badge">CollectD</span>
-							<span class="skillsDeveloped badge">Wavefront</span>
-							<span class="skillsDeveloped badge">Zabbix</span>
-							<span class="skillsDeveloped badge">DataDog</span>
-							<span class="skillsDeveloped badge">Linux OS</span>
-							<span class="skillsDeveloped badge">Bash</span>
-							<span class="skillsDeveloped badge">Networking</span>
-							<span class="skillsDeveloped badge">Mesos</span>
-							<span class="skillsDeveloped badge">Aurora</span>
-							<span class="skillsDeveloped badge">Docker</span>
-							<span class="skillsDeveloped badge">Puppet</span>
-							<span class="skillsDeveloped badge">Chef</span>
-							<span class="skillsDeveloped badge">Netscaler</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="blucora" class="item">
-				<div class="panel-group">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h3>InfoSpace</h3></div>
-						<div class="panel-body">
-							<b>Title:</b> Software Dev/Engineering Intern<br />
-							<b>Period:</b> October 9, 2012 - May 26, 2015<br />
-							<b>Supervisor:</b> Chris Peterson
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">Responsibilities</div>
-						<div class="panel-body">Infrastructure management in AWS</div>
-						<div class="panel-body">Automation for deployment and maintenance using Chef</div>
-						<div class="panel-body">Monitoring for enterprise infrastructure</div>
-						<div class="panel-body">Own the implementation of key features or sub-components</div>
-						<div class="panel-body">Full-cycle development of tools to increase performance</div>
-						<div class="panel-body">Tier 2 support for on-prem and AWS environments</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">Skills Developed</div>
-						<div class="panel-body">
-							<span class="skillsDeveloped badge">Software testing</span>
-							<span class="skillsDeveloped badge">Chef</span>
-							<span class="skillsDeveloped badge">CollectD</span>
-							<span class="skillsDeveloped badge">StatsD</span>
-							<span class="skillsDeveloped badge">Graphite</span>
-							<span class="skillsDeveloped badge">DataDog</span>
-							<span class="skillsDeveloped badge">Nagios</span>
-							<span class="skillsDeveloped badge">AWS</span>
-							<span class="skillsDeveloped badge">Jenkins</span>
-							<span class="skillsDeveloped badge">C#</span>
-							<span class="skillsDeveloped badge">JavaScript</span>
-							<span class="skillsDeveloped badge">JQuery</span>
-							<span class="skillsDeveloped badge">ASP.NET MVC</span>
-							<span class="skillsDeveloped badge">Windows Server 2008/2012</span>
-							<span class="skillsDeveloped badge">Active Directory</span>
-							<span class="skillsDeveloped badge">Networking</span>
-							<span class="skillsDeveloped badge">HTML</span>
-							<span class="skillsDeveloped badge">CSS</span>
-							<span class="skillsDeveloped badge">Salesforce</span>
-							<span class="skillsDeveloped badge">Powershell</span>
-							<span class="skillsDeveloped badge">Ruby</span>
-							<span class="skillsDeveloped badge">Bash</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="uw" class="item">
-				<div class="panel-group">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h3>University of Washington</h3></div>
-						<div class="panel-body">
-							<b>Department:</b> UWTV/IT<br />
-							<b>Title:</b> Intern for Software Engineering<br />
-							<b>Period:</b> June 2011 - September 2011<br />
-							<b>Supervisor:</b> Laurens Banker
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">Responsibilities</div>
-						<div class="panel-body">Learn and understand a new system</div>
-						<div class="panel-body">Communicate with upper-level IT personnel</div>
-						<div class="panel-body">Complete an independent End-to-End project</div>
-						<div class="panel-body">Develop an effective systems tool</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">Skills Developed</div>
-						<div class="panel-body">
-							<span class="skillsDeveloped badge">Work Experience</span>
-							<span class="skillsDeveloped badge">Comunication</span>
-							<span class="skillsDeveloped badge">Dynamic coding</span>
-							<span class="skillsDeveloped badge">Versioning control</span>
-							<span class="skillsDeveloped badge">SQL</span>
-							<span class="skillsDeveloped badge">C#</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div id="other" class="item">
-				<div class="panel-group">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h3>Other Jobs</h3></div>
-						<div class="panel-body">
-							<b>Professional Disc Jockey</b> 2007 - 2012<br />
-							<b>Snowboard/Ski Instructor</b> 2002 - 2014<br />
-							<b>CWU - Computer Science T.A.</b> 2011 - 2012<br />
-							<b>Construction</b> 2007
+							Tired of developing. Must mix.
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
 		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#work_carousel" role="button" data-slide="prev">
+		<a class="left carousel-control" href="#events_carousel" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="right carousel-control" href="#work_carousel" role="button" data-slide="next">
+		<a class="right carousel-control" href="#events_carousel" role="button" data-slide="next">
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
