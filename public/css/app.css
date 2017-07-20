@@ -107,12 +107,12 @@ button > a
 #img_nav
 {
 	display: inline-flex;
-	max-height: 50px;
+	width: 100px;
 }
 
 #img_title
 {
-	height: 100px;
+	width: 200px;
 	display: initial;
 }
 
