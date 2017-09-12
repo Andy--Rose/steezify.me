@@ -1,11 +1,12 @@
 angular.module('music', [])
-	.controller('MusicController', ['$scope', 'ExpandingBlockFactory', '$routeParams', 
-		function MusicController($scope, ExpandingBlockFactory, $routeParams) {
+	.controller('MusicController', ['$scope', '$window', '$routeParams', 'JPlayerFactory', 
+		function MusicController($scope, $window, $routeParams, JPlayerFactory) {
 			this.name = 'MusicController';
 			this.params = $routeParams;
 
 			$scope.callSetActions = function() {
-				ExpandingBlockFactory.setActions(".info-container");
+				JPlayerFactory.init()
+				JPlayerFactory.setPlaylist('#jquery_music_player', '#music_player_container')
 			};
 		}
 	]);

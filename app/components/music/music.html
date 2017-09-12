@@ -1,54 +1,55 @@
+<link rel="stylesheet" href="/public/css/jplayer_overrides.css">
+<link rel="stylesheet" type="text/css" href="/public/js/jplayer/dist/skin/blue.monday/css/jplayer.blue.monday.min.css">
 <div class="container-fluid container-main" ng-controller="MusicController" ng-init="callSetActions()">
-	<div id="info" style="align:center;">
-		<div id="info_soundcloud" class="info-container">
-			<img class="info-icon" src="public/img/logos/soundcloud.png" />
-			<div class="info-inner">
-				<iframe 
-					width="100%" 
-					height="450" 
-					scrolling="no" 
-					frameborder="no" 
-					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1478869&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-				</iframe>
+	<div id="music_player_container" class="jp-video" role="application" aria-label="media player">
+		<div class="jp-type-playlist">
+			<div id="jquery_music_player" class="jp-jplayer" style="display: block; margin: 0 auto"></div>
+			<div class="jp-gui">
+				<div class="jp-video-play">
+					<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+				</div>
+				<div class="jp-interface">
+					<div class="jp-progress">
+						<div class="jp-sync-bar">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+					<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+					<div class="jp-controls-holder">
+						<div class="jp-controls">
+							<button class="jp-previous" role="button" tabindex="0">previous</button>
+							<button class="jp-play" role="button" tabindex="0">play</button>
+							<button class="jp-next" role="button" tabindex="0">next</button>
+							<button class="jp-stop" role="button" tabindex="0">stop</button>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-toggles">
+							<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+							<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+						</div>
+					</div>
+					<div class="jp-details">
+						<div class="jp-title" aria-label="title">&nbsp;</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		
-		<div id="info_mixcloud" class="info-container">
-			<img class="info-icon" src="public/img/logos/mixcloud.png" />
-			<div class="info-inner">
-				<iframe 
-					width="100%" 
-					height="180" 
-					src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fsteezifyme%2F&hide_cover=1" 
-					frameborder="0">
-				</iframe>
-			</div>
-		</div>
-		
-		<div id="info_bootleg1" class="info-container">
-			<img class="info-icon" src="public/img/covers/GDFRound1.jpg" />
-			<div class="info-inner">
-				<audio controls>
-					<source src="public/music/01 GDF Contest Round 1.mp3" type="">
-				</audio>
-			</div>
-		</div>
-		
-		<div id="info_bootleg2" class="info-container">
-			<img class="info-icon" src="public/img/covers/Paradiso2015.jpg" />
-			<div class="info-inner">
-				<audio controls>
-					<source src="public/music/01 Paradiso 2015 Headliners Minimix.mp3" type="">
-				</audio>
-			</div>
-		</div>
-		
-		<div id="info_release" class="info-container">
-			<img class="info-icon" src="public/img/covers/SummerDrive.jpg" />
-			<div class="info-inner">
-				<audio controls>
-					<source src="public/music/01 Summer Drive.mp3" type="">
-				</audio>
+			<div class="jp-playlist">
+    			<ul>
+      				<li></li> <!-- Empty <li> so your HTML conforms with the W3C spec -->
+    			</ul>
+  			</div>
+			<div class="jp-no-solution">
+				<span>Update Required</span>
+				To play the media, you will need to either update your browser to a recent version or update your Flash plugin.
 			</div>
 		</div>
 	</div>
