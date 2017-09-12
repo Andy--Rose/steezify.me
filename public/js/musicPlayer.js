@@ -117,15 +117,14 @@ appModule.factory('JPlayerFactory',
 						{
 						    title:"Humble vs. Flashlight (feat. Kendrick Lamar & Deorro)",
 						    artist:"Steezify",
-						    free: true,
 						    mp3:"/public/music/01 Kendrick Lamar & Deorro - Humble.mp3",
 						    wav:"/public/music/01 Kendrick Lamar & Deorro - Humble.wav",
-						    poster: "/public/img/covers/HumbleFlashlight.png"
+						    poster: "/public/img/covers/HumbleFlashlight.png",
+						    link: "https://theartistunion.com/tracks/f1da7e"
 					  	},
 					  	{
 						    title:"GDF Contest Round 1",
 						    artist:"Steezify",
-						    free: true,
 						    mp3:"/public/music/01 GDF Contest Round 1.mp3",
 						    poster: "/public/img/covers/GDFRound1.jpg",
 						    link: "https://soundcloud.com/steezify/groove-cruise-contest-2017"
@@ -133,7 +132,6 @@ appModule.factory('JPlayerFactory',
 					  	{
 						    title:"Summer Drive",
 						    artist:"Steezify",
-						    free: true,
 						    mp3:"/public/music/01 Summer Drive.mp3",
 						    poster: "/public/img/covers/SummerDrive.jpg",
 						    link: "https://soundcloud.com/steezify/summer-drive"

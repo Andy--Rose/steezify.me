@@ -257,7 +257,7 @@
 			// Create links to free media
 			if(media.free) {
 				var first = true;
-				listItem += "<span class='" + this.options.playlistOptions.freeGroupClass + "'>Free (";
+				listItem += "<span class='" + this.options.playlistOptions.freeGroupClass + "'>(";
 				$.each(media, function(property,value) {
 					if($.jPlayer.prototype.format[property]) { // Check property is a media format.
 						if(first) {
