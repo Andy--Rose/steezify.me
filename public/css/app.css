@@ -257,3 +257,16 @@ button > a
 	-ms-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
+
+#mc-nav-toggle {
+	width: 25px;
+	max-width: 320px;
+}
+
+#mc-nav-toolbar {
+	width: default;
+}
+
+#mc-nav-title {
+	font-family: 'UnifrakturCook', cursive;
+}

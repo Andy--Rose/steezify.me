@@ -1,5 +1,9 @@
 var appModule = angular.module('steezify.me', [
-	'ngRoute', 
+	'ngRoute',
+	'ngMaterial', 
+	'ngMessages',
+	'ngAria',
+
 	'navigation', 
 	'home', 
 	'feed', 
