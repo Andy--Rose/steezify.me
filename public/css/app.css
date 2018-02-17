@@ -259,12 +259,22 @@ button > a
 }
 
 #mc-nav-toggle {
-	width: 25px;
-	max-width: 320px;
+	float:left;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: #333;
+}
+
+#mc-nav-toggle:hover {
+    background-color: rgb(140, 140, 140);
+}
+
+#mc-nav-toggle .icon-bar {
+    background-color: #fff;
 }
 
 #mc-nav-toolbar {
-	width: default;
+
 }
 
 #mc-nav-title {

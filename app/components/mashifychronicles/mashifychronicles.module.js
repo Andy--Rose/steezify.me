@@ -39,6 +39,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 		        $mdSidenav(navID)
 		          .toggle()
 		          .then(function () {
+		          	window.scrollTo(0, 0);
 		            $log.debug("toggle " + navID + " is done");
 		          });
 		      }, 200);

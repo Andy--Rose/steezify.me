@@ -58,32 +58,31 @@
      ng-controller="MashifyChroniclesController" 
      ng-init="callSetActions()">
 
+	<button id="mc-nav-toggle" ng-click="toggleNav()" class="sm-primary navbar-toggle" hide-gt-sm>
+		<span class="sr-only">Toggle Navigation</span>
+     	<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+
  	<section layout="row" flex>
- 		<md-toolbar id="mc-nav-toolbar" class="md-theme-indigo" layout="column">
-		    <md-button id="mc-nav-toggle" ng-click="toggleNav()" class="navbar-toggle md-primary" hide-gt-sm>
-				<span class="sr-only">Toggle Navigation</span>
-		     	<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</md-button>
-			<md-sidenav
-				class="md-sidenav-left"
-			    md-component-id="left"
-			    md-is-locked-open="$mdMedia('gt-sm')"
-			    md-whiteframe="4">
-		    	<md-toolbar class="md-theme-indigo">
-		        	<h1 class="md-toolbar-tools" id="mc-nav-title">Mashify Chronicles</h1>
-	      		</md-toolbar>
-	      		<md-content layout-padding ng-controller="MCNavController">
-	      			<md-button ng-click="close()" class="md-primary" hide-gt-md>
-			          	Close Sidenav Left
-			        </md-button>
-			        <p hide show-gt-md>
-			          	This sidenav is locked open on your device. To go back to the default behavior narrow your display.
-			        </p>
-		    	</md-content>
-			</md-sidenav>
-		</md-toolbar>
+ 		<md-sidenav
+			class="md-sidenav-left"
+		    md-component-id="left"
+		    md-is-locked-open="$mdMedia('gt-sm')"
+		    md-whiteframe="4">
+	    	<md-toolbar class="md-theme-light-blue">
+	        	<h1 class="md-toolbar-tools" id="mc-nav-title">Mashify Chronicles</h1>
+      		</md-toolbar>
+      		<md-content layout-padding ng-controller="MCNavController">
+      			<md-button ng-click="close()" class="md-primary" hide-gt-sm>
+		          	Close Menu
+		        </md-button>
+	    	</md-content>
+		</md-sidenav>
+ 		<!-- <md-toolbar id="mc-nav-toolbar" class="md-theme-light-blue" layout="column">
+			
+		</md-toolbar> -->
 		<md-content flex layout-padding>
 			<div id="music_player_container" class="jp-video" role="application" aria-label="media player">
 				<div class="jp-type-playlist">
