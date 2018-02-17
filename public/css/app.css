@@ -273,10 +273,21 @@ button > a
     background-color: #fff;
 }
 
-#mc-nav-toolbar {
-
+#mc_player_container {
+	margin-top: 15px;
+	margin-left: 15px;
+	width: 80%;
 }
 
 #mc-nav-title {
 	font-family: 'UnifrakturCook', cursive;
+}
+
+#mc_player {
+	max-width: 0;
+	max-height: 0;
+}
+
+#mc-progress {
+	height: 40px;
 }
