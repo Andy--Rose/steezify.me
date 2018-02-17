@@ -115,6 +115,13 @@ appModule.factory('JPlayerFactory',
 					  	cssSelectorAncestor: containerClassName
 					}, [
 						{
+						    title:"Halloween Mix 2017",
+						    artist:"Steezify",
+						    mp3:"/public/music/04 Halloween 2017.mp3",
+						    poster: "/public/img/covers/cover-hw17.jpg",
+						    link: "https://soundcloud.com/steezify/steezify-halloween-mix-2017"
+						},
+						{
 						    title:"Humble vs. Flashlight (feat. Kendrick Lamar & Deorro)",
 						    artist:"Steezify",
 						    mp3:"/public/music/01 Kendrick Lamar & Deorro - Humble.mp3",
