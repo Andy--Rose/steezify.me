@@ -6,7 +6,7 @@ angular.module('music', [])
 
 			$scope.callSetActions = function() {
 				JPlayerFactory.init()
-				JPlayerFactory.setPlaylist('#jquery_music_player', '#music_player_container')
+				JPlayerFactory.setMusicPlaylist('#jquery_music_player', '#music_player_container')
 			};
 		}
 	]);

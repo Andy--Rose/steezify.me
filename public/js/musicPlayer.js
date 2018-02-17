@@ -108,7 +108,7 @@ appModule.factory('JPlayerFactory',
 				});
 			},
 
-			setPlaylist: function(playerClassName, containerClassName) {
+			setMusicPlaylist: function(playerClassName, containerClassName) {
 				var myPlaylist = new jPlayerPlaylist(
 					{
 					  	jPlayer: playerClassName,
@@ -154,6 +154,37 @@ appModule.factory('JPlayerFactory',
 					], 
 					{
 					  	supplied: "mp3, wav",
+				        useStateClassSkin: true,
+				        autoBlur: false,
+				        smoothPlayBar: true,
+				        remainingDuration: true,
+				        toggleDuration: true,
+						size: {
+							width: "250px",
+							height: "250px",
+							cssClass: ""
+						}
+						
+					}
+				);
+			},
+
+			setMashifyChronicles: function(playerClassName, containerClassName) {
+				var myPlaylist = new jPlayerPlaylist(
+					{
+					  	jPlayer: playerClassName,
+					  	cssSelectorAncestor: containerClassName
+					}, [
+						{
+						    title:"Episode 1 - The Underground",
+						    artist:"Steezify",
+						    mp3:"/public/music/1-01 S01E01 - The Underground.mp3",
+						    poster: "/public/img/covers/Episode1-TheUnderground.png",
+						    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
+					  	}
+					], 
+					{
+					  	supplied: "mp3",
 				        useStateClassSkin: true,
 				        autoBlur: false,
 				        smoothPlayBar: true,
