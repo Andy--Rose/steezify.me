@@ -1,10 +1,10 @@
 # Media Files
-public/music/
-public/vid/
-public/img/covers/
-public/img/backgrounds/
-*.mp3
-*.wav
+#public/music/
+#public/vid/
+#public/img/covers/
+#public/img/backgrounds/
+#*.mp3
+#*.wav
 
 # Windows image file caches
 Thumbs.db
