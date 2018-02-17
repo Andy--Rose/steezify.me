@@ -98,10 +98,8 @@ button > a
 #img_profile
 {
 	display: inline-flex;
-	height: 150px;
-	width: 150px;
-	max-height: 250px;
-	max-width: 250px;
+	height: 20%;
+	max-height: 500px;
 }
 
 #img_nav
@@ -112,7 +110,8 @@ button > a
 
 #img_title
 {
-	width: 200px;
+	height: 20%;
+	max-height: 500px;
 	display: initial;
 }
 

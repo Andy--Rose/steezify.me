@@ -1,7 +1,8 @@
 # Media Files
 public/music/
 public/vid/
-public/img/
+public/img/covers/
+public/img/backgrounds/
 *.mp3
 *.wav
 
