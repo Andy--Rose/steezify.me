@@ -6,7 +6,8 @@ angular.module('mashifychronicles', ['ngMaterial'])
 
 			$scope.callSetActions = function() {
 				JPlayerFactory.init()
-				JPlayerFactory.setMashifyChronicles('#jquery_music_player', '#music_player_container')
+				// TODO: Set using route params
+				setPageContents(1,1)
 			};
 
 			$scope.toggleNav = buildDelayedToggler('left');
@@ -54,6 +55,39 @@ angular.module('mashifychronicles', ['ngMaterial'])
 		            $log.debug("toggle " + navID + " is done");
 		          });
 		      };
+		    }
+// poster: "/public/img/covers/Episode1-TheUnderground.png",
+		    function setPageContents(season, episode) {
+		    	// Default to season 1 episode 1
+		    	audioContent = {
+				    title:"Episode 1 - The Underground",
+				    artist:"Steezify",
+				    mp3:"/public/music/1-01 S01E01 - The Underground.mp3",
+				    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
+			  	}
+
+				var myPlaylist = new jPlayerPlaylist(
+					{
+					  	jPlayer: '#mc_player',
+					  	cssSelectorAncestor: '#mc_player_container'
+					}, [
+						audioContent
+					], 
+					{
+					  	supplied: "mp3",
+				        useStateClassSkin: true,
+				        autoBlur: false,
+				        smoothPlayBar: true,
+				        remainingDuration: true,
+				        toggleDuration: true,
+						size: {
+							width: "250px",
+							height: "250px",
+							cssClass: ""
+						}
+						
+					}
+				);
 		    }
 		}
 	).controller('MCNavController', function ($scope, $timeout, $mdSidenav, $log) {
