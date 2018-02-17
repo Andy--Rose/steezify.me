@@ -66,6 +66,10 @@ angular.module('mashifychronicles', ['ngMaterial'])
 				    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
 			  	}
 
+			  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
+
+			  	$('#mc-cover-art').attr("src", '/public/img/covers/Episode1-TheUnderground.png');
+
 				var myPlaylist = new jPlayerPlaylist(
 					{
 					  	jPlayer: '#mc_player',

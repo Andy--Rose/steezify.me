@@ -274,6 +274,7 @@ button > a
 }
 
 #mc_player_container {
+	text-align: center;
 	margin-top: 15px;
 	margin-left: 15px;
 	width: 80%;
@@ -290,4 +291,12 @@ button > a
 
 #mc-progress {
 	height: 40px;
+}
+
+.album-cover {
+	text-align: center;
+}
+
+.album-cover img {
+	height: 40%;
 }
