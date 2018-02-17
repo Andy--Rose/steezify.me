@@ -54,6 +54,7 @@ button > a
 
 .profile-link img
 {
+	border-radius: 10px;
 	width: 75px;
 	height: 75px;
 }
