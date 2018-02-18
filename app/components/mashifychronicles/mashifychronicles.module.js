@@ -65,31 +65,37 @@ angular.module('mashifychronicles', ['ngMaterial'])
 				    mp3:"/public/music/1-01 S01E01 - The Underground.mp3",
 				    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
 			  	}
-
 			  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
+			  	title = "Episode 1.1 - The Underground"
+			  	content = "/public/content/mashify-chronicles/season-1/theUnderground.txt"
 
+			  	setPlayerContent(audioContent);
 			  	$('#mc-cover-art').attr("src", '/public/img/covers/Episode1-TheUnderground.png');
+		  		$('#mc-story-title').html(title);
+		  		$('#mc-story-content').load(content);
+				
+		    }
 
-				var myPlaylist = new jPlayerPlaylist(
+		    function setPlayerContent(content) {
+		    	var myPlaylist = new jPlayerPlaylist(
 					{
 					  	jPlayer: '#mc_player',
 					  	cssSelectorAncestor: '#mc_player_container'
 					}, [
-						audioContent
+						content
 					], 
 					{
 					  	supplied: "mp3",
-				        useStateClassSkin: true,
-				        autoBlur: false,
-				        smoothPlayBar: true,
-				        remainingDuration: true,
-				        toggleDuration: true,
+					    useStateClassSkin: true,
+					    autoBlur: false,
+					    smoothPlayBar: true,
+					    remainingDuration: true,
+					    toggleDuration: true,
 						size: {
 							width: "250px",
 							height: "250px",
 							cssClass: ""
 						}
-						
 					}
 				);
 		    }

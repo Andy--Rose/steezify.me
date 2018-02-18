@@ -300,3 +300,13 @@ button > a
 .album-cover img {
 	height: 40%;
 }
+
+#mc-story-title {
+	width: 100%;
+	background-color: rgb(255, 255, 128);
+}
+
+#mc-story-content {
+	padding: 40px;
+	text-align: left;
+}
