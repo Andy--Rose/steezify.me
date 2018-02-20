@@ -5,7 +5,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 			this.params = $routeParams;
 
 			$scope.callSetActions = function() {
-				JPlayerFactory.init()
+				// JPlayerFactory.init()
 				// TODO: Set using route params
 				if ($routeParams.season != null && $routeParams.episode == null) {
 					$routeParams.episode = 1;
@@ -61,18 +61,20 @@ angular.module('mashifychronicles', ['ngMaterial'])
 			  		$('md-button[id^="mc-menu-1."]').removeClass('active');
 			  		if (episode == 1) {
 			  			$('#mc-menu-1-1').addClass('active');
-			  			audioContent = {
-						    title:"Episode 1 - The Underground",
-						    artist:"Steezify",
-						    mp3:"/public/music/1-01 S01E01 - The Underground.mp3",
-						    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
-					  	}
+			  			// audioContent = {
+						  //   title:"Episode 1 - The Underground",
+						  //   artist:"Steezify",
+						  //   mp3:"/public/music/MC1.1-TheUnderground.mp3",
+						  //   link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
+					  	// }
+					  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/361347950%3Fsecret_token%3Ds-1LjlY&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>'
 					  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
 					  	title = "Episode 1.1 - The Underground"
 					  	content = "/public/content/mashify-chronicles/season-1/1-theUnderground.txt"
 			  		}
 			  		if (episode == 2) {
 			  			$('#mc-menu-1-2').addClass('active');
+			  			embed = null
 			  			coverArt = null
 			  			audioContent = null
 			  			title = "Episode 1.2 - Trouble"
@@ -80,6 +82,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 					if (episode == 3) {
 						$('#mc-menu-1-3').addClass('active');
+						embed = null
 						coverArt = null
 						audioContent = null
 			  			title = "Episode 1.3 - The Machine"
@@ -87,6 +90,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 					if (episode == 4) {
 						$('#mc-menu-1-4').addClass('active');
+						embed = null
 						coverArt = null
 						audioContent = null
 			  			title = "Episode 1.4 - Great Escape"
@@ -94,6 +98,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 					if (episode == 5) {
 						$('#mc-menu-1-5').addClass('active');
+						embed = null
 						coverArt = null
 						audioContent = null
 			  			title = "Episode 1.5 - Going Down"
@@ -101,10 +106,11 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 			  	}
 
-			  	if (audioContent != null) {
-			  		setPlayerContent(audioContent);
-			  	}
+			  	// if (audioContent != null) {
+			  	// 	setPlayerContent(audioContent);
+			  	// }
 			  	$('#mc-cover-art').attr("src", coverArt);
+			  	$('#mc-audio-embed').html(embed);
 		  		$('#mc-story-title').html(title);
 		  		$('#mc-story-content').load(content);
 				
