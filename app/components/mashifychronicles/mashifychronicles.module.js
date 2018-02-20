@@ -1,6 +1,6 @@
 angular.module('mashifychronicles', ['ngMaterial'])
 	.controller('MashifyChroniclesController', 
-		function MashifyChroniclesController($scope, $window, $routeParams, $timeout, $mdSidenav, $log, JPlayerFactory) {
+		function MashifyChroniclesController($scope, $window, $routeParams, $timeout, $mdSidenav, JPlayerFactory) {
 			this.name = 'MashifyChroniclesController';
 			this.params = $routeParams;
 
@@ -44,7 +44,6 @@ angular.module('mashifychronicles', ['ngMaterial'])
 		          .toggle()
 		          .then(function () {
 		          	window.scrollTo(0, 0);
-		            $log.debug("toggle " + navID + " is done");
 		          });
 		      }, 200);
 		    }
@@ -52,11 +51,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 		    function buildToggler(navID) {
 		      return function() {
 		        // Component lookup should always be available since we are not using `ng-if`
-		        $mdSidenav(navID)
-		          .toggle()
-		          .then(function () {
-		            $log.debug("toggle " + navID + " is done");
-		          });
+		        $mdSidenav(navID).toggle()
 		      };
 		    }
 // poster: "/public/img/covers/Episode1-TheUnderground.png",
@@ -139,13 +134,11 @@ angular.module('mashifychronicles', ['ngMaterial'])
 				);
 		    }
 		}
-	).controller('MCNavController', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.close = function () {
-      // Component lookup should always be available since we are not using `ng-if`
-      $mdSidenav('left').close()
-        .then(function () {
-          $log.debug("close LEFT is done");
-        });
-
-    };
+	).controller('MCNavController', function ($scope, $timeout, $mdSidenav) {
+	    $scope.close = function () {
+	      // Component lookup should always be available since we are not using `ng-if`
+	      $mdSidenav('left').close()
+	        .then(function () {
+	        });
+	    };
   });
