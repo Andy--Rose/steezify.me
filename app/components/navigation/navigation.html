@@ -1,5 +1,8 @@
 <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-	<div class="container-fluid" id="navfluid">
+	<div class="container-fluid" 
+	     id="navfluid" 
+	     ng-controller="NavigationController"
+	     ng-init="initLinks()">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
 			<span class="sr-only">Toggle Navigation</span>
@@ -13,10 +16,10 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navigationbar">
 			<ul class="nav navbar-nav">
-				<li id="feed"><a href="feed">Feed</a></li>
-				<li id="music"><a href="music">Music</a></li>
-				<li id="mashifychronicles"><a href="mashifychronicles?season=1&episode=1">Mashify Chronicles</a></li>
-				<li id="events"><a href="events">Events</a></li>
+				<li id="feed"><a class="nav-link" href="feed">Feed</a></li>
+				<li id="music"><a class="nav-link" href="music">Music</a></li>
+				<li id="mashifychronicles"><a class="nav-link" href="mashifychronicles?season=1&episode=1">Mashify Chronicles</a></li>
+				<li id="events"><a class="nav-link" href="events">Events</a></li>
 			</ul>
 		</div>
 	</div>
