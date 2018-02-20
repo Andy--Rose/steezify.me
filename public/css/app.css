@@ -303,7 +303,8 @@ button > a
 
 #mc-story-title {
 	width: 100%;
-	background-color: rgb(255, 255, 128);
+	background:url("../img/default/space-banner-small.png");
+	color: white;
 }
 
 #mc-story-content {
