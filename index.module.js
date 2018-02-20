@@ -1,10 +1,15 @@
 var appModule = angular.module('steezify.me', [
-	'ngRoute', 
+	'ngRoute',
+	'ngMaterial', 
+	'ngMessages',
+	'ngAria',
+
 	'navigation', 
 	'home', 
 	'feed', 
 	'music', 
-	'events'
+	'events',
+	'mashifychronicles'
 ]);
 
 // Routing for the different pages
@@ -24,6 +29,15 @@ appModule.config(['$routeProvider', '$locationProvider',
 			})
 			.when('/events', {
 				template: "<events></events>"
+			})
+			.when('/mashifychronicles', {
+				template: "<mashifychronicles></mashifychronicles>"
+			})
+			.when('/mashify', {
+				template: "<mashifychronicles></mashifychronicles>"
+			})
+			.when('/mc', {
+				template: "<mashifychronicles></mashifychronicles>"
 			})
 			.otherwise('/');		// Routes other paths to home. TODO: Create error page
 		$locationProvider.html5Mode(true);

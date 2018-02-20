@@ -108,7 +108,7 @@ appModule.factory('JPlayerFactory',
 				});
 			},
 
-			setPlaylist: function(playerClassName, containerClassName) {
+			setMusicPlaylist: function(playerClassName, containerClassName) {
 				var myPlaylist = new jPlayerPlaylist(
 					{
 					  	jPlayer: playerClassName,
