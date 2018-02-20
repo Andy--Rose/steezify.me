@@ -7,7 +7,10 @@ angular.module('mashifychronicles', ['ngMaterial'])
 			$scope.callSetActions = function() {
 				JPlayerFactory.init()
 				// TODO: Set using route params
-				setPageContents(1,1)
+				if ($routeParams.season != null && $routeParams.episode == null) {
+					$routeParams.episode = 1;
+				}
+				setPageContents($routeParams.season,$routeParams.episode)
 			};
 
 			$scope.toggleNav = buildDelayedToggler('left');
@@ -67,7 +70,26 @@ angular.module('mashifychronicles', ['ngMaterial'])
 			  	}
 			  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
 			  	title = "Episode 1.1 - The Underground"
-			  	content = "/public/content/mashify-chronicles/season-1/theUnderground.txt"
+			  	content = "/public/content/mashify-chronicles/season-1/1-theUnderground.txt"
+
+			  	if (season == 1) {
+			  		if (episode == 2) {
+			  			title = "Episode 1.2 - Trouble"
+			  			content = "/public/content/mashify-chronicles/season-1/2-trouble.txt"
+					}
+					if (episode == 3) {
+			  			title = "Episode 1.3 - The Machine"
+			  			content = "/public/content/mashify-chronicles/season-1/2-theMachine.txt"
+					}
+					if (episode == 4) {
+			  			title = "Episode 1.4 - Great Escape"
+			  			content = "/public/content/mashify-chronicles/season-1/2-greatEscape.txt"
+					}
+					if (episode == 5) {
+			  			title = "Episode 1.5 - Going Down"
+			  			content = "/public/content/mashify-chronicles/season-1/2-goingDown.txt"
+					}
+			  	}
 
 			  	setPlayerContent(audioContent);
 			  	$('#mc-cover-art').attr("src", '/public/img/covers/Episode1-TheUnderground.png');
