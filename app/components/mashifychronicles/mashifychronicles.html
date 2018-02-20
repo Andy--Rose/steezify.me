@@ -56,8 +56,6 @@
 	    	</md-content>
 		</md-sidenav>
 
-<!-- TODO: Fix the player buttons on small screens to not suck -->
-
 		<!-- Media player -->
 		<div id="mc_player_container" class="jp-video" role="application">
 			<!-- Cover Art -->
@@ -78,22 +76,15 @@
 						<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
 						<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
 						<div class="jp-controls-holder">
-							<div class="jp-controls">
-								<button class="jp-previous" role="button" tabindex="0">previous</button>
+							<div id="mc-controls" class="jp-controls">
 								<button class="jp-play" role="button" tabindex="0">play</button>
-								<button class="jp-next" role="button" tabindex="0">next</button>
-								<button class="jp-stop" role="button" tabindex="0">stop</button>
 							</div>
-							<div class="jp-volume-controls">
+							<div id="mc-volume-controls" class="jp-volume-controls">
 								<button class="jp-mute" role="button" tabindex="0">mute</button>
 								<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
 								<div class="jp-volume-bar">
 									<div class="jp-volume-bar-value"></div>
 								</div>
-							</div>
-							<div class="jp-toggles">
-								<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-								<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
 							</div>
 						</div>
 						<div class="jp-details">

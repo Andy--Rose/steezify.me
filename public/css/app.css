@@ -314,3 +314,13 @@ button > a
 .active {
 	font-weight: bold !important;
 }
+
+#mc-controls {
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-right: 25px;
+}
+
+#mc-volume-controls {
+	margin-left: 25px;
+}
