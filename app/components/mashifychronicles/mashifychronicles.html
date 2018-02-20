@@ -2,58 +2,6 @@
 <link rel="stylesheet" type="text/css" href="/public/js/jplayer/dist/skin/midnight.stars/css/jplayer.midnight.stars.css">
 <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
-<!-- <div class="container-fluid container-main"
-     ng-controller="MashifyChroniclesController" 
-     ng-init="callSetActions()"
-     layout="column" 
-     style="height:500px;" 
-     ng-cloak>
-  <section layout="row" flex>
-    <md-sidenav
-        class="md-sidenav-left"
-        md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
-        md-whiteframe="4">
-      <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Sidenav Left</h1>
-      </md-toolbar>
-      <md-content layout-padding ng-controller="LeftCtrl">
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
-          Close Sidenav Left
-        </md-button>
-        <p hide show-gt-md>
-          This sidenav is locked open on your device. To go back to the default behavior,
-          narrow your display.
-        </p>
-      </md-content>
-    </md-sidenav>
-    <md-content flex layout-padding>
-      <div layout="column" layout-align="top center">
-        <p>
-        The left sidenav will 'lock open' on a medium (>=960px wide) device.
-        </p>
-        <p>
-        The right sidenav will focus on a specific child element.
-        </p>
-        <div>
-          <md-button ng-click="toggleLeft()"
-            class="md-primary" hide-gt-md>
-            Toggle left
-          </md-button>
-        </div>
-        <div>
-          <md-button ng-click="toggleRight()"
-            ng-hide="isOpenRight()"
-            class="md-primary">
-            Toggle right
-          </md-button>
-        </div>
-      </div>
-      <div flex></div>
-    </md-content>
-  </section>
-</div> -->
-
 
 <div class="container-fluid container-main" 
      ng-controller="MashifyChroniclesController" 
@@ -66,8 +14,6 @@
 		<span class="icon-bar"></span>
 	</button>
 
-<!-- TODO: Create the menu items -->
-<!-- TODO: Create a temporary page with release date for episode 2 -->
 <!-- TODO: Cool background for the title -->
 <!-- TODO: Change the Chronicles menu button color to not be the same as the main one -->
 
@@ -75,14 +21,35 @@
 
  		<!-- Inner navigation menu -->
  		<md-sidenav
+ 			id="mc-sidenav"
 			class="md-sidenav-left"
 		    md-component-id="left"
 		    md-is-locked-open="$mdMedia('gt-sm')"
-		    md-whiteframe="4">
+		    md-whiteframe="4"
+		    style="min-width: 270px;">
 	    	<md-toolbar class="md-theme-light-blue">
 	        	<h1 class="md-toolbar-tools" id="mc-nav-title">Mashify Chronicles</h1>
       		</md-toolbar>
-      		<md-content layout-padding ng-controller="MCNavController">
+      		<md-content layout-padding ng-controller="MCNavController" style="min-width: 250px;">
+  				<md-button type="button" data-toggle="collapse" data-target="#mc-menu-season-1">Season 1</md-button>
+  				<div id="mc-menu-season-1" class="collapse">
+  					<md-button id="mc-menu-1-1" href="/mashifychronicles/?season=1&episode=1" class="md-primary">
+	      				Episode 1 - The Underground
+	      			</md-button>
+	      			<md-button id="mc-menu-1-2" href="/mashifychronicles/?season=1&episode=2" class="md-primary">
+	      				Episode 2 - Trouble
+	      			</md-button>
+	      			<md-button id="mc-menu-1-3" href="/mashifychronicles/?season=1&episode=3" class="md-primary">
+	      				Episode 3 - The Machine
+	      			</md-button>
+	      			<md-button id="mc-menu-1-4" href="/mashifychronicles/?season=1&episode=4" class="md-primary">
+	      				Episode 4 - Great Escape
+	      			</md-button>
+	      			<md-button id="mc-menu-1-5" href="/mashifychronicles/?season=1&episode=5" class="md-primary">
+	      				Episode 5 - Going Down
+	      			</md-button>
+				</div>
+				<hr>
       			<md-button ng-click="close()" class="md-primary" hide-gt-sm>
 		          	Close Menu
 		        </md-button>

@@ -310,3 +310,7 @@ button > a
 	padding: 40px;
 	text-align: left;
 }
+
+.active {
+	font-weight: bold !important;
+}

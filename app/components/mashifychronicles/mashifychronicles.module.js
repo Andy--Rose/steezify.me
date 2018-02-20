@@ -61,38 +61,55 @@ angular.module('mashifychronicles', ['ngMaterial'])
 		    }
 // poster: "/public/img/covers/Episode1-TheUnderground.png",
 		    function setPageContents(season, episode) {
-		    	// Default to season 1 episode 1
-		    	audioContent = {
-				    title:"Episode 1 - The Underground",
-				    artist:"Steezify",
-				    mp3:"/public/music/1-01 S01E01 - The Underground.mp3",
-				    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
-			  	}
-			  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
-			  	title = "Episode 1.1 - The Underground"
-			  	content = "/public/content/mashify-chronicles/season-1/1-theUnderground.txt"
-
 			  	if (season == 1) {
+			  		$('#mc-menu-season-1').removeClass('collapse').addClass('collapse in');
+			  		$('md-button[id^="mc-menu-1."]').removeClass('active');
+			  		if (episode == 1) {
+			  			$('#mc-menu-1-1').addClass('active');
+			  			audioContent = {
+						    title:"Episode 1 - The Underground",
+						    artist:"Steezify",
+						    mp3:"/public/music/1-01 S01E01 - The Underground.mp3",
+						    link: "https://soundcloud.com/steezify/mashify-chronicles-s01-e01-the-underground-sound"
+					  	}
+					  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
+					  	title = "Episode 1.1 - The Underground"
+					  	content = "/public/content/mashify-chronicles/season-1/1-theUnderground.txt"
+			  		}
 			  		if (episode == 2) {
+			  			$('#mc-menu-1-2').addClass('active');
+			  			coverArt = null
+			  			audioContent = null
 			  			title = "Episode 1.2 - Trouble"
 			  			content = "/public/content/mashify-chronicles/season-1/2-trouble.txt"
 					}
 					if (episode == 3) {
+						$('#mc-menu-1-3').addClass('active');
+						coverArt = null
+						audioContent = null
 			  			title = "Episode 1.3 - The Machine"
-			  			content = "/public/content/mashify-chronicles/season-1/2-theMachine.txt"
+			  			content = "/public/content/mashify-chronicles/season-1/3-theMachine.txt"
 					}
 					if (episode == 4) {
+						$('#mc-menu-1-4').addClass('active');
+						coverArt = null
+						audioContent = null
 			  			title = "Episode 1.4 - Great Escape"
-			  			content = "/public/content/mashify-chronicles/season-1/2-greatEscape.txt"
+			  			content = "/public/content/mashify-chronicles/season-1/4-greatEscape.txt"
 					}
 					if (episode == 5) {
+						$('#mc-menu-1-5').addClass('active');
+						coverArt = null
+						audioContent = null
 			  			title = "Episode 1.5 - Going Down"
-			  			content = "/public/content/mashify-chronicles/season-1/2-goingDown.txt"
+			  			content = "/public/content/mashify-chronicles/season-1/5-goingDown.txt"
 					}
 			  	}
 
-			  	setPlayerContent(audioContent);
-			  	$('#mc-cover-art').attr("src", '/public/img/covers/Episode1-TheUnderground.png');
+			  	if (audioContent != null) {
+			  		setPlayerContent(audioContent);
+			  	}
+			  	$('#mc-cover-art').attr("src", coverArt);
 		  		$('#mc-story-title').html(title);
 		  		$('#mc-story-content').load(content);
 				
