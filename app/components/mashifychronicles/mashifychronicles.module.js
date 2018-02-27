@@ -74,9 +74,8 @@ angular.module('mashifychronicles', ['ngMaterial'])
 			  		}
 			  		if (episode == 2) {
 			  			$('#mc-menu-1-2').addClass('active');
-			  			embed = null
-			  			coverArt = null
-			  			audioContent = null
+			  			embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/370562984%3Fsecret_token%3Ds-CzXeF&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
+			  			coverArt = "/public/img/covers/Episode2-Trouble.png"
 			  			title = "Episode 1.2 - Trouble"
 			  			content = "/public/content/mashify-chronicles/season-1/2-trouble.txt"
 					}
@@ -84,7 +83,6 @@ angular.module('mashifychronicles', ['ngMaterial'])
 						$('#mc-menu-1-3').addClass('active');
 						embed = null
 						coverArt = null
-						audioContent = null
 			  			title = "Episode 1.3 - The Machine"
 			  			content = "/public/content/mashify-chronicles/season-1/3-theMachine.txt"
 					}
@@ -92,7 +90,6 @@ angular.module('mashifychronicles', ['ngMaterial'])
 						$('#mc-menu-1-4').addClass('active');
 						embed = null
 						coverArt = null
-						audioContent = null
 			  			title = "Episode 1.4 - Great Escape"
 			  			content = "/public/content/mashify-chronicles/season-1/4-greatEscape.txt"
 					}
@@ -100,7 +97,6 @@ angular.module('mashifychronicles', ['ngMaterial'])
 						$('#mc-menu-1-5').addClass('active');
 						embed = null
 						coverArt = null
-						audioContent = null
 			  			title = "Episode 1.5 - Going Down"
 			  			content = "/public/content/mashify-chronicles/season-1/5-goingDown.txt"
 					}
