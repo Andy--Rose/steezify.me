@@ -14,9 +14,10 @@ var appModule = angular.module('steezify.me', [
 
 // Routing for the different pages
 // All pages go through the index, but the page is displayed differently by the URL
-// 
-appModule.config(['$routeProvider', '$locationProvider', 
+
+appModule.config(
 	function($routeProvider, $locationProvider) {
+		$locationProvider.html5Mode(true);
 		$routeProvider
 			.when('/', {
 				template: '<home></home>'
@@ -40,9 +41,8 @@ appModule.config(['$routeProvider', '$locationProvider',
 				template: "<mashifychronicles></mashifychronicles>"
 			})
 			.otherwise('/');		// Routes other paths to home. TODO: Create error page
-		$locationProvider.html5Mode(true);
 	}
-]);
+);
 
 appModule.controller('IndexController', ['$route', '$routeParams', '$location',
 	function($route, $routeParams, $location) {
