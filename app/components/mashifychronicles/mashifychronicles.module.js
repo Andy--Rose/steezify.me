@@ -56,6 +56,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 		    }
 // poster: "/public/img/covers/Episode1-TheUnderground.png",
 		    function setPageContents(season, episode) {
+		    	episodeFound = false;
 			  	if (season == 1) {
 			  		$('#mc-menu-season-1').removeClass('collapse').addClass('collapse in');
 			  		$('md-button[id^="mc-menu-1."]').removeClass('active');
@@ -71,6 +72,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					  	coverArt = "/public/img/covers/Episode1-TheUnderground.png"
 					  	title = "Episode 1.1 - The Underground"
 					  	content = "/public/content/mashify-chronicles/season-1/1-theUnderground.txt"
+					  	episodeFound = true;
 			  		}
 			  		if (episode == 2) {
 			  			$('#mc-menu-1-2').addClass('active');
@@ -78,6 +80,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 			  			coverArt = "/public/img/covers/Episode2-Trouble.png"
 			  			title = "Episode 1.2 - Trouble"
 			  			content = "/public/content/mashify-chronicles/season-1/2-trouble.txt"
+			  			episodeFound = true;
 					}
 					if (episode == 3) {
 						$('#mc-menu-1-3').addClass('active');
@@ -85,6 +88,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 						coverArt = null
 			  			title = "Episode 1.3 - The Machine"
 			  			content = "/public/content/mashify-chronicles/season-1/3-theMachine.txt"
+			  			episodeFound = true;
 					}
 					if (episode == 4) {
 						$('#mc-menu-1-4').addClass('active');
@@ -92,6 +96,7 @@ angular.module('mashifychronicles', ['ngMaterial'])
 						coverArt = null
 			  			title = "Episode 1.4 - Great Escape"
 			  			content = "/public/content/mashify-chronicles/season-1/4-greatEscape.txt"
+			  			episodeFound = true;
 					}
 					if (episode == 5) {
 						$('#mc-menu-1-5').addClass('active');
@@ -99,7 +104,15 @@ angular.module('mashifychronicles', ['ngMaterial'])
 						coverArt = null
 			  			title = "Episode 1.5 - Going Down"
 			  			content = "/public/content/mashify-chronicles/season-1/5-goingDown.txt"
+			  			episodeFound = true;
 					}
+			  	}
+
+			  	if (episodeFound) {
+					fbq('track', 'ViewContent', {
+						content_ids: "season" + season + "episode" + episode,
+						content_type: 'MashifyCronicles',
+					});
 			  	}
 
 			  	// if (audioContent != null) {
