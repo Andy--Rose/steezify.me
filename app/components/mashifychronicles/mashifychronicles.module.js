@@ -84,8 +84,8 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 					if (episode == 3) {
 						$('#mc-menu-1-3').addClass('active');
-						embed = null
-						coverArt = null
+						embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/409287873%3Fsecret_token%3Ds-Qdlvi&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
+						coverArt = "/public/img/covers/Episode3-TheMachine.png"
 			  			title = "Episode 1.3 - The Machine"
 			  			content = "/public/content/mashify-chronicles/season-1/3-theMachine.txt"
 			  			episodeFound = true;
