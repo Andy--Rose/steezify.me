@@ -92,8 +92,8 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 					if (episode == 4) {
 						$('#mc-menu-1-4').addClass('active');
-						embed = null
-						coverArt = null
+						embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413292960%3Fsecret_token%3Ds-jcvT4&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
+						coverArt = "/public/img/covers/Episode4-GreatEscape.png"
 			  			title = "Episode 1.4 - Great Escape"
 			  			content = "/public/content/mashify-chronicles/season-1/4-greatEscape.txt"
 			  			episodeFound = true;
