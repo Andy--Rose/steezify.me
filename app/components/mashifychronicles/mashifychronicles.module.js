@@ -100,10 +100,10 @@ angular.module('mashifychronicles', ['ngMaterial'])
 					}
 					if (episode == 5) {
 						$('#mc-menu-1-5').addClass('active');
-						embed = null
-						coverArt = null
-			  			title = "Episode 1.5 - Going Down"
-			  			content = "/public/content/mashify-chronicles/season-1/5-goingDown.txt"
+						embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/433110033&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
+						coverArt = "/public/img/covers/Episode5-Graduation.png"
+			  			title = "Episode 1.5 - Graduation"
+			  			content = "/public/content/mashify-chronicles/season-1/5-graduation.txt"
 			  			episodeFound = true;
 					}
 			  	}
