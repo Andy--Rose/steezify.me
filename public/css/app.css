@@ -3,6 +3,11 @@ button > a
 	color: white;
 }
 
+#main
+{
+	background-color: black;
+}
+
 .row > div
 {
 	margin-left:15px;
@@ -67,7 +72,7 @@ button > a
 }
 
 .home-bg {
-	background:url("../img/backgrounds/Tables.jpg") no-repeat center fixed;
+	background:url("../img/default/steezify-logo.gif") no-repeat center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -293,6 +298,14 @@ button > a
 	height: 40px;
 }
 
+#mc-sidenav,
+#music-sidenav,
+#mc-sidenav-content,
+#music-sidenav-content {
+	background-color: black;
+	color: white;
+}
+
 #music-nav-toggle {
 	float:left;
 	margin-left: 5px;
@@ -388,6 +401,10 @@ button > a
     white-space: -normal !important; /* Opera 4-6 */    
     white-space: -o-normal !important; /* Opera 7 */
     border-top: 1px solid #000 !important;
+}
+
+.event-image {
+	width: 100%;
 }
 /*
 #music-menu-tracks {

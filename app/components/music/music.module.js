@@ -8,7 +8,7 @@ angular.module('music', ['ngMaterial'])
 				// JPlayerFactory.init()
 				// JPlayerFactory.setMusicPlaylist('#jquery_music_player', '#music_player_container')
 				if ($routeParams.track == null) {
-					$routeParams.track = 'mdr';
+					$routeParams.track = 'sos';
 				}
 				setPageContents($routeParams.track)
 			};
@@ -62,6 +62,14 @@ angular.module('music', ['ngMaterial'])
 		    	isMix = false;
 		    	isShow = false;
 		    	
+		    	if (track == 'sos') {
+		  			$('#music-menu-sos').addClass('active');
+				  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608080035&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
+				  	coverArt = "/public/img/covers/sos.jpg"
+				  	title = "Avicii - SOS (Steezify Remix)"
+				  	contentFound = true;
+				  	isTrack = true;
+		  		}
 		  		if (track == 'mdr') {
 		  			$('#music-menu-mdr').addClass('active');
 				  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/447348048&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
@@ -114,6 +122,14 @@ angular.module('music', ['ngMaterial'])
 		  		}
 
 		  		// shows
+		  		if (track == "kinetik") {
+		  			$('#music-menu-kinetik').addClass('active');
+		  			embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/596968680&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
+		  			coverArt = "/public/img/covers/kinetik.jpg"
+				  	title = "Kinetik 1 Year @ Black Box 2018"
+				  	contentFound = true;
+				  	isShow = true;
+		  		}
 				if (track == "fdgd2018") {
 		  			$('#music-menu-fdgd2018').addClass('active');
 		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsteezify%2Ffrozen-dead-guy-days-2018%2F" frameborder="0" ></iframe>'

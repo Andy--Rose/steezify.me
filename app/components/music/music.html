@@ -26,9 +26,12 @@
 	    	<md-toolbar class="md-theme-light-blue">
 	        	<h1 class="md-toolbar-tools" id="music-nav-title">Steezify Tracks</h1>
       		</md-toolbar>
-      		<md-content layout-padding ng-controller="MusicNavController" style="min-width: 250px;">
+      		<md-content id="music-sidenav-content" layout-padding ng-controller="MusicNavController" style="min-width: 250px;">
       			<md-button type="button" class="music-menu-btn" data-toggle="collapse" data-target="#music-menu-tracks">Tracks</md-button>
   				<div id="music-menu-tracks" class="collapse">
+  					<md-button class="music-menu-item" id="music-menu-sos" href="/music/?track=sos" class="md-primary">
+	      				Avicii - SOS (Steezify Remix)
+	      			</md-button>
 					<md-button class="music-menu-item" id="music-menu-mdr" href="/music/?track=mdr" class="md-primary">
 	      				Party Favor & Baauer - MDR (Steezify Remix)
 	      			</md-button>
@@ -53,6 +56,9 @@
   				</div>
   				<md-button type="button" class="music-menu-btn" data-toggle="collapse" data-target="#music-menu-shows">Shows</md-button>
   				<div id="music-menu-shows" class="collapse">
+  					<md-button class="music-menu-item" id="music-menu-kinetik" href="/music/?track=kinetik" class="md-primary">
+	      				Kinetik 1 Year @ Black Box 2018
+	      			</md-button>
   					<md-button class="music-menu-item" id="music-menu-fdgd2018" href="/music/?track=fdgd2018" class="md-primary">
 	      				Frozen Dead Guy Days 2018
 	      			</md-button>
