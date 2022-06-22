@@ -8,7 +8,7 @@ angular.module('music', ['ngMaterial'])
 				// JPlayerFactory.init()
 				// JPlayerFactory.setMusicPlaylist('#jquery_music_player', '#music_player_container')
 				if ($routeParams.track == null) {
-					$routeParams.track = 'sos';
+					$routeParams.track = 'bananeurysm';
 				}
 				setPageContents($routeParams.track)
 			};
@@ -62,19 +62,27 @@ angular.module('music', ['ngMaterial'])
 		    	isMix = false;
 		    	isShow = false;
 		    	
+		    	if (track == 'bananeurysm') {
+		  			$('#music-menu-bananeurysm').addClass('active');
+				  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1209681082&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/quiterightrecords" title="Quite Right Records" target="_blank" style="color: #cccccc; text-decoration: none;">Quite Right Records</a> · <a href="https://soundcloud.com/quiterightrecords/steezify-bananeurysm" title="Steezify - Bananeurysm" target="_blank" style="color: #cccccc; text-decoration: none;">Steezify - Bananeurysm</a></div>'
+				  	coverArt = "/public/img/covers/bananeurysm.png"
+				  	title = "Bananeurysm"
+				  	contentFound = true;
+				  	isTrack = true;
+		  		}
+		  		if (track == 'footprints') {
+		  			$('#music-menu-footprints').addClass('active');
+				  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1209681067&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/quiterightrecords" title="Quite Right Records" target="_blank" style="color: #cccccc; text-decoration: none;">Quite Right Records</a> · <a href="https://soundcloud.com/quiterightrecords/steezify-footprints" title="Steezify - Footprints" target="_blank" style="color: #cccccc; text-decoration: none;">Steezify - Footprints</a></div>'
+				  	coverArt = "/public/img/covers/bananeurysm.png"
+				  	title = "Footprints"
+				  	contentFound = true;
+				  	isTrack = true;
+		  		}
 		    	if (track == 'sos') {
 		  			$('#music-menu-sos').addClass('active');
 				  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608080035&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
 				  	coverArt = "/public/img/covers/sos.jpg"
 				  	title = "Avicii - SOS (Steezify Remix)"
-				  	contentFound = true;
-				  	isTrack = true;
-		  		}
-		  		if (track == 'mdr') {
-		  			$('#music-menu-mdr').addClass('active');
-				  	embed = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/447348048&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>'
-				  	coverArt = "/public/img/covers/mdr.png"
-				  	title = "Party Favor & Baauer - MDR (Steezify Remix)"
 				  	contentFound = true;
 				  	isTrack = true;
 		  		}
@@ -94,29 +102,21 @@ angular.module('music', ['ngMaterial'])
 				  	contentFound = true;
 				  	isTrack = true;
 		  		}
-		  		if (track == 'humble') {
-		  			$('#music-menu-humble').addClass('active');
-				  	embed = '<iframe src="https://wavo.me/embed/pulses/21140494583810000" width="100%" height="450" frameborder="0"></iframe>'
-				  	coverArt = "/public/img/covers/humble.png"
-				  	title = "Humble Flashlight (Steezify Mashup)"
-				  	contentFound = true;
-				  	isTrack = true;
-		  		}
 
 		  		// mixes
-		  		if (track == "diso2018") {
-		  			$('#music-menu-diso2018').addClass('active');
-		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fsteezify%2Fparadiso-2018-dj-contest%2F" frameborder="0" ></iframe>'
-		  			coverArt = "/public/img/covers/diso2018.png"
-				  	title = "Paradiso 2018 - DJ Contest"
+		  		if (track == "mhms050") {
+		  			$('#music-menu-mhms050').addClass('active');
+		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fsteezify%2Fmonday-house-music-social-050-20210803-010055%2F" frameborder="0" ></iframe>'
+		  			coverArt = "/public/img/covers/mhms050.png"
+				  	title = "Monday House Music Social 050"
 				  	contentFound = true;
 				  	isMix = true;
 		  		}
-		  		if (track == "halloween2017") {
-		  			$('#music-menu-halloween2017').addClass('active');
-		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsteezify%2Fsteezify-halloween-mix-2017%2F" frameborder="0" ></iframe>'
-		  			coverArt = "/public/img/covers/halloween2017.jpg"
-				  	title = "Halloween 2017 Mix"
+		  		if (track == "mixwed") {
+		  			$('#music-menu-mixwed').addClass('active');
+		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fsteezify%2Fdenver-house-music-mix-wednesday%2F" frameborder="0" ></iframe>'
+		  			coverArt = "/public/img/covers/mixwed.jpg"
+				  	title = "DHM Mix Wednesday"
 				  	contentFound = true;
 				  	isMix = true;
 		  		}
@@ -138,11 +138,11 @@ angular.module('music', ['ngMaterial'])
 				  	contentFound = true;
 				  	isShow = true;
 		  		}
-		  		if (track == "chinesenewyear2018") {
-		  			$('#music-menu-chinesenewyear2018').addClass('active');
-		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fsteezify%2Fchinese-new-year-decades-pop%2F" frameborder="0" ></iframe>'
-		  			coverArt = "/public/img/covers/chinesenewyear2018.png"
-				  	title = "Chinese New Year (Decades Pop)"
+		  		if (track == "reset") {
+		  			$('#music-menu-reset').addClass('active');
+		  			embed = '<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fsteezify%2Freset-campout-2021%2F" frameborder="0" ></iframe>'
+		  			coverArt = "/public/img/covers/reset.png"
+				  	title = "Reset Campout"
 				  	contentFound = true;
 				  	isShow = true;
 		  		}
